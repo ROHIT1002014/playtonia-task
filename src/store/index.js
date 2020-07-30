@@ -11,7 +11,7 @@ export default new Vuex.Store({
 
   getters: {
     user(state) {
-      return state.user;
+      return state.userDetails;
     },
   },
 
@@ -24,7 +24,7 @@ export default new Vuex.Store({
   actions: {
     fetchUser({ commit }) {
       axios.get('https://jsonplaceholder.typicode.com/todos/').then(users => {
-        console.log(users)
+        // console.log(users)
         commit("SET_ALL_USERS", users)
     })
     },
